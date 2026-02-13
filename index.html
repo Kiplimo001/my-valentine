@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="us.jpg" alt="Our Memory" class="profile-img">
+        
+        <h1>Will you be my Valentine? ❤️</h1>
+        
+        <div class="buttons">
+            <button id="yesButton" onclick="celebrate()">Yes!</button>
+            <button id="noButton" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+
+        function celebrate() {
+            alert("Yay! I can't wait! ❤️");
+            document.body.innerHTML = "<h1>See you on Valentine's! 🌹</h1><div class='confetti'>🎉</div>";
+        }
+    </script>
+</body>
+</html>
